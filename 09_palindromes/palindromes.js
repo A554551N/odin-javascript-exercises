@@ -1,10 +1,10 @@
 const palindromes = function (stringToTest) {
-    const azRegex = /[a-z0-9]/
+    const az09Regex = /[a-z0-9]/
     //split the string after putting it in lower case
-    const splitString = stringToTest.toLowerCase().split("").filter((char) => azRegex.test(char))
+    const splitString = stringToTest.toLowerCase().split("").filter((char) => az09Regex.test(char))
     //filter off punctuation and spaces
     const splitWithoutPunctuation = splitString.filter((char) => azRegex.test(char))
-    
+
     // deep copy the array.  What follows exists because I didn't know .reverse() was a thing
     const arrayToReverse = [...splitWithoutPunctuation];
     const reversedArray = new Array();
